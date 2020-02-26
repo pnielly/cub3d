@@ -6,7 +6,7 @@
 /*   By: pnielly <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/03 17:45:11 by pnielly           #+#    #+#             */
-/*   Updated: 2020/02/25 21:04:43 by pnielly          ###   ########.fr       */
+/*   Updated: 2020/02/26 10:43:31 by pnielly          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,13 +80,14 @@
 */
 # define GAMEOVER "T'AS PERDU"
 # define VICTORY "BRAVO, T'AS REUSSI"
-# define WELCOME "BIENVENUE GROS PADAWANE"
+# define WELCOME "BIENVENUE JEUNE AVENTURIER DE L'ARCHE PERDUE"
 # define KINDER "APPUIE SUR < K > POUR LE NIVEAU KINDERGARTEN"
 # define TIPKINDER "LA PROCHAINE FOIS, APPUIE SUR < O > =)"
 # define LEGEND "APPUIE SUR < L > POUR LE NIVEAU LEGENDAIRE"
 # define TIPLEGEND "POUR LE NIVEAU LEGENDAIRE, AIDE TOI DES COLONNES !"
 # define OBJ "OBJECTIF : ATTEINDRE LA COLONNE ISOLEE"
 # define SUITE "APPUIE SUR < ESPACE > POUR CONTINUER"
+# define VIC_LEGEND "FELICITATIONS, T'ES UNE LEGENDE"
 
 typedef struct	s_size
 {

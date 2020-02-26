@@ -6,7 +6,7 @@
 /*   By: pnielly <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/09 16:31:36 by pnielly           #+#    #+#             */
-/*   Updated: 2020/02/25 21:04:33 by pnielly          ###   ########.fr       */
+/*   Updated: 2020/02/26 09:18:44 by pnielly          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int		ft_putstr(char *str)
 	int	i;
 
 	i = 0;
+	write(1, "Error\n", 6);
 	while (str[i])
 		i++;
 	write(1, str, i);
