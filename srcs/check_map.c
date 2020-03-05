@@ -6,7 +6,7 @@
 /*   By: pnielly <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 20:10:08 by pnielly           #+#    #+#             */
-/*   Updated: 2020/03/03 14:57:27 by pnielly          ###   ########.fr       */
+/*   Updated: 2020/03/05 15:10:49 by pnielly          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,29 @@ int		ft_build_map_tab(t_list *alst, t_stock *stock)
 	return (0);
 }
 
+char	*ft_3_spaces_1_zero(char *line)
+{
+	int		i;
+
+	if (line[0] == ' ' && line[1] == ' ')
+		line[0] = '0';
+	i = 1;
+	while (line[i + 1])
+	{
+		if (line[i - 1] == ' ' && line[i] == ' ' && line[i + 1] == ' ')
+			line[i] = '0';
+		i++;
+	}
+	return (line);
+}
+
 t_list	*ft_line_map(char *line, t_stock *stock)
 {
 	t_list	*tmp;
 
 	if (!(tmp = malloc(sizeof(t_list))))
 		return (NULL);
-	tmp->content = ft_strxclude(line, " ");
+	tmp->content = ft_strxclude(ft_3_spaces_1_zero(line), " ");
 	tmp->next = 0;
 	stock->map->size_line = ft_strlen(tmp->content);
 	stock->map->nb_lines++;

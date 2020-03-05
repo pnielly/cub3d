@@ -6,7 +6,7 @@
 /*   By: pnielly <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/03 17:45:11 by pnielly           #+#    #+#             */
-/*   Updated: 2020/03/03 17:06:49 by pnielly          ###   ########.fr       */
+/*   Updated: 2020/03/05 13:44:16 by pnielly          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@
 # define PINK 0x980088
 # define RED 0xFF0000
 # define FOG 0x000000
+# define YELLOW 0xFFFF00
 
 /*
 ** image data
@@ -65,8 +66,8 @@
 # define CAM_FOV 1.0472
 # define WALL_HEIGHT 64
 # define SPRITE_SIDE 64
-# define SCREEN_WIDTH 2559
-# define SCREEN_HEIGHT 1439
+# define SCREEN_WIDTH 2560
+# define SCREEN_HEIGHT 1440
 # define BPP 3
 # define COMPRESSION 24
 
@@ -272,7 +273,7 @@ void			ft_check_error(t_stock *stock, char **tab);
 int				ft_walled(t_stock *stock, int j);
 int				ft_resolution(t_stock *stock, char **tab);
 char			*ft_path(char **tab, char *zone);
-int			ft_assign_floor(t_stock *stock, char *line);
-int			ft_assign_ceiling(t_stock *stock, char *line);
+int				ft_assign_floor(t_stock *stock, char *line);
+int				ft_assign_ceiling(t_stock *stock, char *line);
 
 #endif

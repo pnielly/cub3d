@@ -6,7 +6,7 @@
 /*   By: pnielly <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 20:29:29 by pnielly           #+#    #+#             */
-/*   Updated: 2020/03/03 17:44:23 by pnielly          ###   ########.fr       */
+/*   Updated: 2020/03/05 13:46:21 by pnielly          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,11 @@ int		ft_choose_level(t_stock *stock)
 	mlx_hook(stock->win_ptr, DESTROYNOTIFY,
 			STRUCTURENOTIFYMASK, &ft_win_exit, stock);
 	mlx_string_put(stock->mlx_ptr, stock->win_ptr, stock->r->x / 6,
-			stock->r->y / 6, PINK, WELCOME);
+			stock->r->y / 6, YELLOW, WELCOME);
 	mlx_string_put(stock->mlx_ptr, stock->win_ptr, stock->r->x / 6,
-			stock->r->y / 4, PINK, KINDER);
+			stock->r->y / 4, YELLOW, KINDER);
 	mlx_string_put(stock->mlx_ptr, stock->win_ptr, stock->r->x / 6,
-			stock->r->y / 2, PINK, LEGEND);
+			stock->r->y / 2, YELLOW, LEGEND);
 	mlx_hook(stock->win_ptr, KEYPRESS, KEYPRESSMASK, ft_level, stock);
 	mlx_loop(stock->mlx_ptr);
 	return (0);
@@ -48,9 +48,9 @@ int		ft_goal(t_stock *stock)
 	mlx_hook(stock->win_ptr, DESTROYNOTIFY,
 			STRUCTURENOTIFYMASK, &ft_win_exit, stock);
 	mlx_string_put(stock->mlx_ptr, stock->win_ptr, stock->r->x / 6,
-			stock->r->y / 6, PINK, OBJ);
+			stock->r->y / 6, YELLOW, OBJ);
 	mlx_string_put(stock->mlx_ptr, stock->win_ptr, stock->r->x / 6,
-			stock->r->y / 4, PINK, SUITE);
+			stock->r->y / 4, YELLOW, SUITE);
 	mlx_hook(stock->win_ptr, KEYPRESS, KEYPRESSMASK, ft_level, stock);
 	mlx_loop(stock->mlx_ptr);
 	return (0);

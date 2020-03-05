@@ -6,7 +6,7 @@
 /*   By: pnielly <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 12:37:06 by pnielly           #+#    #+#             */
-/*   Updated: 2020/03/03 16:51:51 by pnielly          ###   ########.fr       */
+/*   Updated: 2020/03/05 14:08:35 by pnielly          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,14 +62,20 @@ int		ft_assign_ceiling(t_stock *stock, char *line)
 		}
 	}
 	line++;
+	if (!line[0])
+		stock->error = 1;
 	stock->c->r = ft_atoi(line);
-	while (line[0] != ',')
+	while (line[0] != ',' && line[0])
 		line++;
 	line++;
+	if (!line[0])
+		stock->error = 1;
 	stock->c->g = ft_atoi(line);
-	while (line[0] != ',')
+	while (line[0] != ',' && line[0])
 		line++;
 	line++;
+	if (!line[0])
+		stock->error = 1;
 	stock->c->b = ft_atoi(line);
 	return (0);
 }
@@ -85,14 +91,20 @@ int		ft_assign_floor(t_stock *stock, char *line)
 		}
 	}
 	line++;
+	if (!line[0])
+		stock->error = 1;
 	stock->f->r = ft_atoi(line);
-	while (line[0] != ',')
+	while (line[0] != ',' && line[0])
 		line++;
 	line++;
+	if (!line[0])
+		stock->error = 1;
 	stock->f->g = ft_atoi(line);
-	while (line[0] != ',')
+	while (line[0] != ',' && line[0])
 		line++;
 	line++;
+	if (!line[0])
+		stock->error = 1;
 	stock->f->b = ft_atoi(line);
 	return (0);
 }

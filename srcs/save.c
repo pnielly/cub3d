@@ -6,7 +6,7 @@
 /*   By: pnielly <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 10:46:07 by pnielly           #+#    #+#             */
-/*   Updated: 2020/03/03 19:12:56 by pnielly          ###   ########.fr       */
+/*   Updated: 2020/03/05 13:41:32 by pnielly          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,16 +55,16 @@ void	ft_file_header(t_stock *stock)
 	int			size_img;
 
 	ft_bzero(stock->file_header, 54);
-	padding = (4 - (((int)stock->r->x * BPP) % 4) % 4);
+	padding = (4 - ((int)stock->r->x * BPP) % 4) % 4;
 	stock->file_header[0] = 'B';
 	stock->file_header[1] = 'M';
 	size_headers = 14 + 40;
-	size_img = (stock->r->y - 1) * ((int)stock->r->x + padding) * BPP;
+	size_img = (int)stock->r->y * ((int)stock->r->x + padding) * BPP;
 	ft_char(stock->file_header, 2, size_img + size_headers);
 	ft_char(stock->file_header, 10, size_headers);
 	ft_char(stock->file_header, 14, 40);
 	ft_char(stock->file_header, 18, (int)stock->r->x);
-	ft_char(stock->file_header, 22, (int)stock->r->y);
+	ft_char(stock->file_header, 22, (int)stock->r->y - 1);
 	ft_char(stock->file_header, 26, 1);
 	ft_char(stock->file_header, 28, COMPRESSION);
 	ft_char(stock->file_header, 30, 0);
@@ -85,13 +85,13 @@ int		ft_write_img(t_stock *stock)
 	while (++j < (int)stock->r->y)
 	{
 		i = -1;
-		while (++i < ft_min((int)stock->r->x, 2500))
+		while (++i < (int)stock->r->x)
 		{
-			rgb[0] = stock->img->img_data_addr[((int)stock->r->y - 1 - j)
+			rgb[0] = stock->img->img_data_addr[((int)stock->r->y - j)
 					* (int)stock->r->x + i] >> 16;
-			rgb[1] = stock->img->img_data_addr[((int)stock->r->y - 1 - j)
+			rgb[1] = stock->img->img_data_addr[((int)stock->r->y - j)
 					* (int)stock->r->x + i] >> 8;
-			rgb[2] = stock->img->img_data_addr[((int)stock->r->y - 1 - j)
+			rgb[2] = stock->img->img_data_addr[((int)stock->r->y - j)
 					* (int)stock->r->x + i];
 			if (write(stock->save_fd, rgb + 2, 1) < 0)
 				return (ft_putstr("WRITE FAILED (SAVE BMP)\n"));
