@@ -6,7 +6,7 @@
 /*   By: pnielly <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 10:46:07 by pnielly           #+#    #+#             */
-/*   Updated: 2020/03/06 12:03:24 by pnielly          ###   ########.fr       */
+/*   Updated: 2020/03/11 12:14:43 by pnielly          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,9 @@ void	ft_char(unsigned char *file, int start, int value)
 **	0 here because all are important
 */
 
-void	ft_adjust_res(t_stock *stock)
+int		ft_padding(t_stock *stock)
 {
-	if ((int)stock->r->y != 1)
-		stock->r->y--;
+	return ((4 - ((int)stock->r->x * BPP) % 4) % 4);
 }
 
 void	ft_file_header(t_stock *stock)
@@ -61,8 +60,9 @@ void	ft_file_header(t_stock *stock)
 	int			size_img;
 
 	ft_bzero(stock->file_header, 54);
-	ft_adjust_res(stock);
-	padding = (4 - ((int)stock->r->x * BPP) % 4) % 4;
+	if ((int)stock->r->y != 1)
+		stock->r->y--;
+	padding = ft_padding(stock);
 	stock->file_header[0] = 'B';
 	stock->file_header[1] = 'M';
 	size_headers = 14 + 40;

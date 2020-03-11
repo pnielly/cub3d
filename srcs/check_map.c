@@ -6,7 +6,7 @@
 /*   By: pnielly <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 20:10:08 by pnielly           #+#    #+#             */
-/*   Updated: 2020/03/06 16:58:18 by pnielly          ###   ########.fr       */
+/*   Updated: 2020/03/11 10:38:41 by pnielly          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,6 @@ int		ft_read_file(t_stock *stock, int fd)
 	t_list	*tmp;
 	char	*line;
 
-	if (!(stock->map = malloc(sizeof(t_map))))
-		return (ft_putstr("MALLOC FAILED\n"));
 	stock->map->nb_lines = 0;
 	stock->map->size_line = 0;
 	while (get_next_line(fd, &line) > 0)
@@ -82,6 +80,8 @@ int		ft_check_map(t_stock *stock, char *file)
 	if ((fd = open(file, O_RDONLY)) == -1)
 		return (ft_putstr("MAP FILE DOES NOT EXIST !\n"));
 	stock->checked = ft_strdup("\060\060\060\060\060\060\060\060");
+	if (!(stock->map = malloc(sizeof(t_map))))
+		return (ft_putstr("MALLOC FAILED\n"));
 	if (ft_read_file(stock, fd))
 		return (ft_putstr("ERROR READING MAP\n"));
 	if (ft_strncmp(stock->checked, "11111111", 8))

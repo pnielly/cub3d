@@ -6,7 +6,7 @@
 /*   By: pnielly <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/19 21:30:30 by pnielly           #+#    #+#             */
-/*   Updated: 2020/03/06 13:45:21 by pnielly          ###   ########.fr       */
+/*   Updated: 2020/03/11 11:43:21 by pnielly          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ int	ft_init_struct_stock(t_stock *stock)
 	stock->start_read_map = 0;
 	stock->end_read_map = 0;
 	stock->error = 0;
+	stock->nb_sprites = 1;
 	if (!(stock->ray = malloc(sizeof(t_ray))))
 		return (ft_putstr("MALLOC FAILED (RAY)\n"));
 	ft_init_struct_ray(stock->ray);
@@ -54,6 +55,5 @@ int	ft_init_struct_stock(t_stock *stock)
 	ft_init_struct_move(stock->move);
 	if (!(stock->player = malloc(sizeof(t_player))))
 		return (ft_putstr("MALLOC FAILED (PLAYER)\n"));
-	stock->nb_sprites = 0;
 	return (0);
 }

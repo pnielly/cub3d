@@ -6,7 +6,7 @@
 /*   By: pnielly <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/03 11:04:33 by pnielly           #+#    #+#             */
-/*   Updated: 2020/03/06 16:24:27 by pnielly          ###   ########.fr       */
+/*   Updated: 2020/03/11 12:14:36 by pnielly          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,11 @@ int	main(int argc, char **argv)
 		return (ft_putstr("PARSING FAILED"));
 	if (ft_init_game(stock))
 		return (ft_putstr("ENV CAN'T BE INIT FOR SOME REASON"));
-/**	if (argc == 3 && !ft_strncmp(argv[2], "--save", 5))
+	if (argc == 3 && !ft_strncmp(argv[2], "--save", 5))
 	{
 		ft_screenshot(stock);
 		return (0);
-	}**/
+	}
 	system("afplay chopin.mp3 & ");
 	ft_goal(stock);
 	return (0);
