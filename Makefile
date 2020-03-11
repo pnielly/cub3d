@@ -6,11 +6,11 @@
 #    By: pnielly <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/02 16:12:05 by pnielly           #+#    #+#              #
-#    Updated: 2020/03/11 12:20:04 by pnielly          ###   ########.fr        #
+#    Updated: 2020/03/11 12:24:18 by pnielly          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = cub3D
+NAME = Cub3D
 
 # directories
 DIR_SRC = ./srcs
