@@ -1,7 +1,7 @@
-# cub3d
+# Cub3d
 42 project
 
-*** HOW TO ***
+***HOW TO***
 
 Launch the game :
 
@@ -13,7 +13,7 @@ Save a screenshot of the first image of the game :
 
 > ./Cub3D map.cub --save
 
-CONCERNING THE MAP :
+***CONCERNING THE MAP***
 
 0 : Free-to-walk Area
 1 : Wall
