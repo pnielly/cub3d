@@ -5,13 +5,13 @@
 
 Launch the game :
 
->> make
+> make
 
->> ./Cub3D map.cub
+> ./Cub3D map.cub
 
 Save a screenshot of the first image of the game :
 
->> ./Cub3D map.cub --save
+> ./Cub3D map.cub --save
 
 CONCERNING THE MAP :
 
