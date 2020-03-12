@@ -6,6 +6,7 @@
 Launch the game :
 
 >> make
+
 >> ./Cub3D map.cub
 
 Save a screenshot of the first image of the game :
