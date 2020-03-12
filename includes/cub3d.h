@@ -6,7 +6,7 @@
 /*   By: pnielly <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/03 17:45:11 by pnielly           #+#    #+#             */
-/*   Updated: 2020/03/11 11:41:30 by pnielly          ###   ########.fr       */
+/*   Updated: 2020/03/11 12:53:30 by pnielly          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,7 @@ typedef struct	s_color
 	int	r;
 	int	g;
 	int	b;
-	int				check;
+	int	check;
 }				t_color;
 
 typedef struct	s_player
