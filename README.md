@@ -1,4 +1,4 @@
-# Cub3d (Final grade 113%)
+# Cub3d (Final grade : 113%)
 42 project
 
 ***HOW TO***
