@@ -1,6 +1,6 @@
 # Cub3d (Final grade : 113%)
 
-***HOW TO***
+## Usage
 
 Launch the game :
 
@@ -12,7 +12,7 @@ Save a screenshot of the first image of the game :
 
 > ./Cub3D map.cub --save
 
-***CONCERNING THE MAP***
+## Create your own map
 
 0 : Free-to-walk Area
 1 : Wall
