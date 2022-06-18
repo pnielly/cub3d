@@ -1,5 +1,8 @@
 # Cub3d (Final grade : 113%)
 
+## Attention
+This project was designed to work on a darwinOS, with the minilibX installed.
+
 ## Usage
 
 Launch the game :
@@ -19,6 +22,8 @@ Save a screenshot of the first image of the game :
 2 : Object </br>
 3 : Trap (makes you loose life and teleports you to another spot) </br>
 4 : Objective (you win if you touch it) </br>
+
+## Bonus
 
 Pressing 'o' will display all the traps in 'Kindergarten mode'
 
