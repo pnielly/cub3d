@@ -30,5 +30,5 @@ Save a screenshot of the first image of the game :
 
 Pressing 'o' will display all the traps in 'Kindergarten mode'
 
-Feel free to modify the map in order to design new levels !
+Feel free to modify the map in order to design new levels ! </br>
 Feel free to ask if you have any question.
