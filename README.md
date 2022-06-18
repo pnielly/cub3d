@@ -14,11 +14,11 @@ Save a screenshot of the first image of the game :
 
 ## Create your own map
 
-0 : Free-to-walk Area
-1 : Wall
-2 : Object
-3 : Trap (makes you loose life and teleports you to another spot)
-4 : Objective (you win if you touch it)
+0 : Free-to-walk Area </br>
+1 : Wall </br>
+2 : Object </br>
+3 : Trap (makes you loose life and teleports you to another spot) </br>
+4 : Objective (you win if you touch it) </br>
 
 Pressing 'o' will display all the traps in 'Kindergarten mode'
 
