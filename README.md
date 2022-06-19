@@ -6,7 +6,7 @@ This project is inspired by the world-famous eponymous game, considered the firs
 ![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
 
 ## Attention
-This project was designed to work on a darwinOS, with the minilibX installed.
+This project was designed to work on a darwinOS, using the minilibX library.
 
 ## Usage
 
